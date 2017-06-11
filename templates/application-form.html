@@ -1,0 +1,38 @@
+<!doctype html>
+{% extends 'base.html' %}
+    {% block title %}Application Form
+    {% endblock %}
+{% block content %}
+  <div class="container-fluid">
+    <h1>Thank you for your interest in our open postions!</h1><br>
+      <h3 class="outlined">Please fill out all the fields below and press submit to apply.</h3>
+      <br>
+</div>
+  <form action = "/application-success"  method="POST">
+    <div class="container">
+      <div class="row"> 
+        <div class="col-lg-6">
+          Please enter your first name:<input type="text" class="input" name="first-name">
+        </div>    
+        <div class="col-lg-6 last-name">    
+            Please enter your last name:<input type="text" class="input" name="last-name">
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col-lg-6"><b>    
+            Please enter your salary requirement:</b> <input type="number" class="input" name="salary">
+        </div>
+        <div class="col-lg-6">Desired position:
+          <select name="job-postion">
+            {% for job, title in jobs.items() %}
+              <option value="{{ job }}">{{ title }}</option>
+              {% endfor %}
+          </select>
+        </div>
+
+        <input type="submit" class="input">
+      </div>
+    
+    </div>
+  </form>
+{% endblock %}

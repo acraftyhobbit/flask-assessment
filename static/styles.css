@@ -1,0 +1,18 @@
+/* Your CSS goes here */
+.input {
+    background-color: yellow;
+}
+
+.outlined {
+    border: 1px solid black;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.last-name{
+    font-weight: bold;
+}
