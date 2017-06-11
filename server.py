@@ -31,7 +31,7 @@ def app_confirmation():
 
     first_name = request.form.get("first-name")
     last_name = request.form.get("last-name")
-    job_postion = request.form.get("job-postion")
+    job_position = request.form.get("job-position")
     salary = request.form.get("salary")
     
     
@@ -40,7 +40,7 @@ def app_confirmation():
                            first_name=first_name,
                            last_name=last_name,
                            salary="$" + '{:20,.2f}'.format(float(salary)),
-                           job_postion=job_postion)
+                           job_position=job_position)
 
 
 if __name__ == "__main__":

@@ -23,7 +23,7 @@
             Please enter your salary requirement:</b> <input type="number" class="input" name="salary">
         </div>
         <div class="col-lg-6">Desired position:
-          <select name="job-postion">
+          <select name="job-position">
             {% for job, title in jobs.items() %}
               <option value="{{ job }}">{{ title }}</option>
               {% endfor %}
